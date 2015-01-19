@@ -12,9 +12,11 @@ class ArcWatchView extends Ui.WatchFace {
 
     //! Class vars
     var fast_updates = true;
+    var device_settings;
 
     //! Load your resources here
     function onLayout(dc) {
+        device_settings = Sys.getDeviceSettings();
     }
 
     //! Restore the state of the app and prepare the view to be shown
@@ -52,12 +54,23 @@ class ArcWatchView extends Ui.WatchFace {
 
         // Draw the strings. These coordinates should match the arcs above
         var dateStrings = Time.Gregorian.info( Time.now(), Time.FORMAT_MEDIUM );
+
+        // TODO: There may be a better way to get the hour string than figuring it out ourselves
+        var hourToDisplay = dateStrings.hour;
+        if( !device_settings.is24Hour ) {
+            hourToDisplay %= 12;
+        }
+
+        if( hourToDisplay == 0 && !device_settings.is24Hour ) {
+            hourToDisplay = 12;
+        }
+
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
         dc.drawText(x, y - 25 + font_ofst, Gfx.FONT_TINY, dateStrings.month, Gfx.TEXT_JUSTIFY_LEFT);
         dc.drawText(x, y - 40 + font_ofst, Gfx.FONT_TINY, Lang.format("$1$", [dateStrings.day]), Gfx.TEXT_JUSTIFY_LEFT);
         dc.drawText(x, y - 55 + font_ofst, Gfx.FONT_TINY, dateStrings.day_of_week, Gfx.TEXT_JUSTIFY_LEFT);
-        dc.drawText(x, y - 70 + font_ofst, Gfx.FONT_TINY, Lang.format("$1$", [dateStrings.hour]), Gfx.TEXT_JUSTIFY_LEFT);
-        dc.drawText(x, y - 85 + font_ofst, Gfx.FONT_TINY, Lang.format("$1$", [dateStrings.min]), Gfx.TEXT_JUSTIFY_LEFT);
+        dc.drawText(x, y - 70 + font_ofst, Gfx.FONT_TINY, Lang.format("$1$", [hourToDisplay]), Gfx.TEXT_JUSTIFY_LEFT);
+        dc.drawText(x, y - 85 + font_ofst, Gfx.FONT_TINY, Lang.format("$1$", [dateStrings.min.format("%02d")]), Gfx.TEXT_JUSTIFY_LEFT);
 
         if( fast_updates ) {
             dc.drawText(x, y - 100 + font_ofst, Gfx.FONT_TINY, Lang.format("$1$", [dateStrings.sec]), Gfx.TEXT_JUSTIFY_LEFT);
