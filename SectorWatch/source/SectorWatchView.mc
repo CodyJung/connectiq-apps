@@ -30,9 +30,11 @@ class SectorWatchView extends Ui.WatchFace {
 
     //! Class vars
     var fast_updates = true;
+    var device_settings;
 
     //! Load your resources here
     function onLayout(dc) {
+        device_settings = Sys.getDeviceSettings();
     }
 
     //! Restore the state of the app and prepare the view to be shown
@@ -66,9 +68,7 @@ class SectorWatchView extends Ui.WatchFace {
         // Draw the current second in red
         if( fast_updates ) {
             dc.setColor(Gfx.COLOR_RED, Gfx.COLOR_RED);
-            var out_x = ( min_array[dateInfo.sec][0] + min_array[( dateInfo.sec + 1 ) % 60][0] ) / 2;
-            var out_y = ( min_array[dateInfo.sec][1] + min_array[( dateInfo.sec + 1 ) % 60][1] ) / 2;
-            dc.fillPolygon([min_array[dateInfo.sec], [out_x, out_y], min_array[( dateInfo.sec + 1 ) % 60], [109, 109]]);
+            dc.fillPolygon([min_array[dateInfo.sec], min_array[( dateInfo.sec + 1 ) % 60], [109, 109]]);
         }
 
         // Draw the segments
@@ -80,16 +80,38 @@ class SectorWatchView extends Ui.WatchFace {
         // Clear central area for hour ticks
         dc.fillCircle( 109, 109, 90 );
 
-        // Draw hour ticks in dark gray. Here we're drawing the
-        // ticks individually.
-        dc.setColor(Gfx.COLOR_DK_GRAY, Gfx.COLOR_TRANSPARENT);
-        for( var i=0; i < dateInfo.hour; i++ ) {
-            dc.fillPolygon([ hour_array[i], [109, 109], hour_array[i + 1 % 24] ]);
+        if( device_settings.is24Hour ) {
+            // Draw hour ticks in dark gray. Here we're drawing the
+            // ticks individually.
+            dc.setColor(Gfx.COLOR_DK_GRAY, Gfx.COLOR_TRANSPARENT);
+            for( var i=0; i < dateInfo.hour; i++ ) {
+                dc.fillPolygon([ hour_array[i], [109, 109], hour_array[i + 1 % 24] ]);
+            }
+        } else {
+
+            if( dateInfo.hour <= 11 ) {
+                // Light gray for the AM
+                dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
+                for( var i=0; i < ( dateInfo.hour % 12 ) * 2; i++ ) {
+                    dc.fillPolygon([ hour_array[i], [109, 109], hour_array[i + 1 % 24] ]);
+                }
+            } else {
+                // Light gray for the AM
+                dc.setColor(Gfx.COLOR_LT_GRAY, Gfx.COLOR_TRANSPARENT);
+                dc.fillCircle(109, 109, 89);
+
+                // Dark gray for the PM
+                dc.setColor(Gfx.COLOR_DK_GRAY, Gfx.COLOR_TRANSPARENT);
+                for( var i=0; i < ( dateInfo.hour % 12 ) * 2; i++ ) {
+                    dc.fillPolygon([ hour_array[i], [109, 109], hour_array[i + 1 % 24] ]);
+                }
+            }
+
         }
 
         // Segment the hour ticks
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-        for( var i=0; i<12; i++ ) {
+        for( var i=0; i<12; i += (device_settings.is24Hour ? 1 : 2) ) {
             dc.drawLine(hour_array[i][0], hour_array[i][1], hour_array[i+12][0], hour_array[i+12][1]);
         }
 
@@ -97,8 +119,18 @@ class SectorWatchView extends Ui.WatchFace {
         dc.fillCircle( 109, 109, 60 );
 
         // Draw the current time in black
-        dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_BLACK);
-        var timeString = Lang.format("$1$:$2$", [dateInfo.hour, dateInfo.min.format("%02d")]);
+        dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_TRANSPARENT);
+
+        var hourToDisplay = dateInfo.hour;
+        if( !device_settings.is24Hour ) {
+            hourToDisplay %= 12;
+        }
+
+        if( hourToDisplay == 0 && !device_settings.is24Hour ) {
+            hourToDisplay = 12;
+        }
+
+        var timeString = Lang.format("$1$:$2$", [hourToDisplay, dateInfo.min.format("%02d")]);
         var timeYOfst = dc.getFontHeight(Gfx.FONT_NUMBER_HOT);
         dc.drawText( 109, 109 - (timeYOfst / 2), Gfx.FONT_NUMBER_HOT, timeString, Gfx.TEXT_JUSTIFY_CENTER);
     }
