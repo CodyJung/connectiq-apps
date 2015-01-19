@@ -6,6 +6,7 @@ Licensing is per-app, so check the appropriate folder.
 
 ArcWatch
 --------
+[ArcWatch on the Connect IQ App Store](https://apps.garmin.com/en-US/apps/5b58da19-6b09-4bd2-b48a-a830c0b515f4)
 
 A watchface for the Garmin fenix 3 loosely based on the [polar clock](http://blog.pixelbreaker.com/polarclock) watch style.
 Supports gesture detection (fast updates).
