@@ -22,3 +22,13 @@ Supports gesture detection (fast updates) with a red sector representing the cur
 
 ![SectorWatch preview](/docs/sectorwatch_cover.png?raw=true "SectorWatch on fenix 3")
 ![SectorWatch 12hour preview](/docs/sectorwatch_12hour.png?raw=true "12-hour mode")
+
+Pip-Boy 30
+----------
+Not on the Connect IQ App Store because this is probably copyrighted.
+Probably shouldn't be on GitHub, either, but... oh well.
+
+A watchface for the Vivoactive similar to the Pip-Boy 3000 from the Fallout series of games. Mostly static.
+The chest health bar represents battery. The leg health bar represents % of daily step goal. The time is displayed below.
+
+![Pip-Boy 30 preview](/docs/pipboy_cover.png?raw=true "Pipboy on vivoactive")

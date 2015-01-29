@@ -1,0 +1,8 @@
+<resources>
+    <string id="AppName">PipBoy30</string>
+
+    <bitmap id="LauncherIcon" filename="images/launcher_icon.png" ></bitmap>
+    <bitmap id="WatchBG" filename="images/background.bmp" ></bitmap>
+    
+    <font id="font_timefont" filename="fonts/pipboy_font.fnt" filter="0123456789:" />
+</resources>
