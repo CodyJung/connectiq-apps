@@ -3,6 +3,8 @@
 
     <bitmap id="LauncherIcon" filename="images/launcher_icon.png" ></bitmap>
     <bitmap id="WatchBG" filename="images/background.bmp" ></bitmap>
+    <bitmap id="BadFoot" filename="images/bad_foot.bmp" ></bitmap>
+    <bitmap id="BadFace" filename="images/bad_face.bmp" ></bitmap>
     
     <font id="font_timefont" filename="fonts/pipboy_font.fnt" filter="0123456789:" />
 </resources>

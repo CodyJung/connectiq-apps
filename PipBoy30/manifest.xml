@@ -3,9 +3,13 @@
 
         <iq:products>
             <iq:product id="vivoactive" partNumber="006-B1907-00"/>
+            <iq:product id="fr920xt" partNumber="006-B1765-00"/>
+            <iq:product id="epix" partNumber="006-B1988-00"/>
         </iq:products>
 
-        <iq:permissions/>
+        <iq:permissions>
+            <iq:uses-permission id="Steps"/>
+        </iq:permissions>
 
         <iq:languages>
         </iq:languages>
