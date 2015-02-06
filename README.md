@@ -27,9 +27,12 @@ Supports gesture detection (fast updates) with a red sector representing the cur
 
 Pip-Boy 30
 ----------
-Not on the Connect IQ App Store because this is probably copyrighted.
+Not on the Connect IQ App Store because this is probably copyrighted, but you can get it here:
+
 [Pip-Boy 30 for Vivoactive](https://s3.amazonaws.com/codyjung-ciq-builds/PipBoy30-vivoactive.prg)
+
 [Pip-Boy 30 for FR920XT](https://s3.amazonaws.com/codyjung-ciq-builds/PipBoy30-fr920xt.prg) (Currently suffers from a device bug that offsets the background)
+
 [Pip-Boy 30 for Epix](https://s3.amazonaws.com/codyjung-ciq-builds/PipBoy30-epix.prg) (Colors are currently incorrect)
 
 A watchface for the Vivoactive similar to the Pip-Boy 3000 from the Fallout series of games. Mostly static.
