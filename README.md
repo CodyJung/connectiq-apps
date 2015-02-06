@@ -4,6 +4,8 @@ connectiq-apps
 A container repository for all of my Garmin Connect IQ apps, widgets, and watchfaces.
 Licensing is per-app, so check the appropriate folder.
 
+[![Build Status](https://travis-ci.org/CodyJung/connectiq-apps.svg?branch=master)](https://travis-ci.org/CodyJung/connectiq-apps)
+
 ArcWatch
 --------
 [ArcWatch on the Connect IQ App Store](https://apps.garmin.com/en-US/apps/5b58da19-6b09-4bd2-b48a-a830c0b515f4)
@@ -26,7 +28,9 @@ Supports gesture detection (fast updates) with a red sector representing the cur
 Pip-Boy 30
 ----------
 Not on the Connect IQ App Store because this is probably copyrighted.
-Probably shouldn't be on GitHub, either, but... oh well.
+[Pip-Boy 30 for Vivoactive](https://s3.amazonaws.com/codyjung-ciq-builds/PipBoy30-vivoactive.prg)
+[Pip-Boy 30 for FR920XT](https://s3.amazonaws.com/codyjung-ciq-builds/PipBoy30-fr920xt.prg) (Currently suffers from a device bug that offsets the background)
+[Pip-Boy 30 for Epix](https://s3.amazonaws.com/codyjung-ciq-builds/PipBoy30-epix.prg) (Colors are currently incorrect)
 
 A watchface for the Vivoactive similar to the Pip-Boy 3000 from the Fallout series of games. Mostly static.
 The chest health bar represents battery. The right leg health bar represents % of daily step goal. The left leg health bar is the move bar.
