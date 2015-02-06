@@ -1,11 +1,19 @@
 language: java
-addons:
-    artifacts: true
 install:
-    - chmod -R +x ./scripts
-    - ./scripts/install-sdk.sh
-    - export PATH=$PATH:connect-win-sdk-latest/bin/
+- chmod -R +x ./scripts
+- ./scripts/install-sdk.sh
+- export PATH=$PATH:connect-win-sdk-latest/bin/
 script:
-    - ./scripts/build.sh PipBoy30 vivoactive fr920xt epix
-    - ./scripts/build.sh ArcWatch fenix3
-    - ./scripts/build.sh SectorWatch fenix3
+- ./scripts/build.sh PipBoy30 vivoactive fr920xt epix
+- ./scripts/build.sh ArcWatch fenix3
+- ./scripts/build.sh SectorWatch fenix3
+deploy:
+  provider: s3
+  access_key_id: AKIAJ7TL3Z6PASTLHQ5Q
+  secret_access_key:
+    secure: S8HhgQPxrJbQNlvX7h/ykfBNxLVOHkW7l47CZGKKu8yJJO9Z6pdgclJcK2xAB++TmvaUFOi0TnCm2b+adQJnXJWEB3e55Rf6tcwE9v31Jj9o99dBb5drETB4qFMqkusmMbPEqJqh7tZqSKKn3zzq8ks3GJBYnym1oZGgNpxr4x0=
+  bucket: codyjung-ciq-builds
+  local-dir: out
+  acl: public_read
+  on:
+    repo: CodyJung/connectiq-apps
