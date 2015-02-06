@@ -1,4 +1,5 @@
 language: java
-before_script: chmod -R +x ./scripts
-install: ./scripts/install-sdk.sh
+install:
+    - chmod -R +x ./scripts
+    - ./scripts/install-sdk.sh
 script: ./scripts/build-pipboy.sh
