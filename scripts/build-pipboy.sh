@@ -1,7 +1,4 @@
 #!/bin/bash
-export PATH=$PATH:../connect-win-sdk-latest/bin/
-export CLASSPATH=$CLASSPATH:../connect-win-sdk-latest/bin/monkeybrains.jar
-
 echo $PATH
 echo $CLASSPATH
 
