@@ -1,4 +1,6 @@
 language: java
+addons:
+    artifacts: true
 install:
     - chmod -R +x ./scripts
     - ./scripts/install-sdk.sh
@@ -7,5 +9,3 @@ script:
     - ./scripts/build.sh PipBoy30 vivoactive fr920xt epix
     - ./scripts/build.sh ArcWatch fenix3
     - ./scripts/build.sh SectorWatch fenix3
-	
-after_success: artifacts upload
