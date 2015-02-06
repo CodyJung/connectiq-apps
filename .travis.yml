@@ -3,5 +3,4 @@ install:
     - chmod -R +x ./scripts
     - ./scripts/install-sdk.sh
     - export PATH=$PATH:connect-win-sdk-latest/bin/
-    - export CLASSPATH=$CLASSPATH:connect-win-sdk-latest/bin/monkeybrains.jar
 script: ./scripts/build-pipboy.sh
