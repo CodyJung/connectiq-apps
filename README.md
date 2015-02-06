@@ -29,6 +29,8 @@ Not on the Connect IQ App Store because this is probably copyrighted.
 Probably shouldn't be on GitHub, either, but... oh well.
 
 A watchface for the Vivoactive similar to the Pip-Boy 3000 from the Fallout series of games. Mostly static.
-The chest health bar represents battery. The leg health bar represents % of daily step goal. The time is displayed below.
+The chest health bar represents battery. The right leg health bar represents % of daily step goal. The left leg health bar is the move bar.
+The time is displayed below.
 
 ![Pip-Boy 30 preview](/docs/pipboy_cover.png?raw=true "Pipboy on vivoactive")
+![Pip-Boy 30 movebar](/docs/pipboy_movebar.png?raw=true "Pipboy move bar")
