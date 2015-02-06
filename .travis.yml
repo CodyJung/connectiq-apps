@@ -1,6 +1,11 @@
 language: java
+addons:
+    artifacts: true
 install:
     - chmod -R +x ./scripts
     - ./scripts/install-sdk.sh
     - export PATH=$PATH:connect-win-sdk-latest/bin/
-script: ./scripts/build-pipboy.sh PipBoy30 vivoactive fr920xt epix
+script:
+    - ./scripts/build.sh PipBoy30 vivoactive fr920xt epix
+    - ./scripts/build.sh ArcWatch fenix3
+    - ./scripts/build.sh SectorWatch fenix3

@@ -1,4 +1,5 @@
 #!/bin/bash
+set -ev
 pwd
 
 for DEVICE in "${@:2}"; do
