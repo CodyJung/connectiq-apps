@@ -3,4 +3,4 @@ install:
     - chmod -R +x ./scripts
     - ./scripts/install-sdk.sh
     - export PATH=$PATH:connect-win-sdk-latest/bin/
-script: ./scripts/build-pipboy.sh
+script: ./scripts/build-pipboy.sh PipBoy30 vivoactive fr920xt epix
