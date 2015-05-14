@@ -1,0 +1,5 @@
+<resources>
+    <string id="AppName">CalTrack</string>
+
+    <bitmap id="LauncherIcon" filename="images/launcher_icon.png" />
+</resources>

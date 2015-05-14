@@ -1,0 +1,5 @@
+<layout id="WatchFace">
+	<drawable id="watchface_background" />
+    <label id="HourLabel" x="89" y="center" font="Rez.Fonts.BBFont" justification="Gfx.TEXT_JUSTIFY_RIGHT" color="Gfx.COLOR_WHITE" />
+    <label id="MinuteLabel" x="125" y="center" font="Rez.Fonts.BBFont" justification="Gfx.TEXT_JUSTIFY_LEFT" color="Gfx.COLOR_RED" />
+</layout>

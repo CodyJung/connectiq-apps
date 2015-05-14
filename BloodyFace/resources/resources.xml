@@ -1,0 +1,10 @@
+<resources>
+    <string id="AppName">BloodFace</string>
+
+    <bitmap id="LauncherIcon" filename="images/launcher_icon.png" />
+    <font id="BBFont" filename="fonts/bb_num.fnt" filter="0123456789" />
+    
+    <drawable-list id="watchface_background" background="Gfx.COLOR_BLACK">
+	    <bitmap id="Background" filename="images/bb_bg.bmp" x="0" y="0" />
+    </drawable-list>
+</resources>

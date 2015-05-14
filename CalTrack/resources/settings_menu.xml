@@ -1,0 +1,7 @@
+<resources>
+	<menu id="SettingsMenu">
+		<menu-item id="settings_item_set_goal">Set Goal</menu-item>
+		<menu-item id="settings_item_remaining">Calorie Display</menu-item>
+		<menu-item id="settings_item_clear">Clear History</menu-item>
+	</menu>
+</resources>

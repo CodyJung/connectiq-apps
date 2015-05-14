@@ -1,0 +1,55 @@
+<resources>
+	<menu id="HundredsMenu">
+		<menu-item id="hun_0">000</menu-item>
+		<menu-item id="hun_1">100</menu-item>
+		<menu-item id="hun_2">200</menu-item>
+		<menu-item id="hun_3">300</menu-item>
+		<menu-item id="hun_4">400</menu-item>
+		<menu-item id="hun_5">500</menu-item>
+		<menu-item id="hun_6">600</menu-item>
+		<menu-item id="hun_7">700</menu-item>
+		<menu-item id="hun_8">800</menu-item>
+		<menu-item id="hun_9">900</menu-item>
+		<menu-item id="hun_10">1000</menu-item>
+		<menu-item id="hun_11">1100</menu-item>
+		<menu-item id="hun_12">1200</menu-item>
+		<menu-item id="hun_13">1300</menu-item>
+		<menu-item id="hun_14">1400</menu-item>
+		<menu-item id="hun_more">More</menu-item>
+	</menu>
+	
+	<menu id="HundredsMenu2">
+		<menu-item id="hun_less">Less</menu-item>
+		<menu-item id="hun_15">1500</menu-item>
+		<menu-item id="hun_16">1600</menu-item>
+		<menu-item id="hun_17">1700</menu-item>
+		<menu-item id="hun_18">1800</menu-item>
+		<menu-item id="hun_19">1900</menu-item>
+		<menu-item id="hun_20">2000</menu-item>
+		<menu-item id="hun_21">2100</menu-item>
+		<menu-item id="hun_22">2200</menu-item>
+		<menu-item id="hun_23">2300</menu-item>
+		<menu-item id="hun_24">2400</menu-item>
+		<menu-item id="hun_25">2500</menu-item>
+		<menu-item id="hun_26">2600</menu-item>
+		<menu-item id="hun_27">2700</menu-item>
+		<menu-item id="hun_28">2800</menu-item>
+		<menu-item id="hun_more2">More</menu-item>
+	</menu>
+	
+	<menu id="HundredsMenu3">
+		<menu-item id="hun_less2">Less</menu-item>
+		<menu-item id="hun_29">2900</menu-item>
+		<menu-item id="hun_30">3000</menu-item>
+		<menu-item id="hun_31">3100</menu-item>
+		<menu-item id="hun_32">3200</menu-item>
+		<menu-item id="hun_33">3300</menu-item>
+		<menu-item id="hun_34">3400</menu-item>
+		<menu-item id="hun_35">3500</menu-item>
+		<menu-item id="hun_36">3600</menu-item>
+		<menu-item id="hun_37">3700</menu-item>
+		<menu-item id="hun_38">3800</menu-item>
+		<menu-item id="hun_39">3900</menu-item>
+		<menu-item id="hun_40">4000</menu-item>
+	</menu>
+</resources>
