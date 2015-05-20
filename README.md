@@ -22,12 +22,12 @@ SectorWatch
 A grayscale watchface for the Garmin fenix 3 with sections that fill up around around the digital time.
 Supports gesture detection (fast updates) with a red sector representing the current seconds.
 
-![SectorWatch preview](/docs/sectorwatch_cover.png?raw=true "SectorWatch on fenix 3")
-![SectorWatch 12hour preview](/docs/sectorwatch_12hour.png?raw=true "12-hour mode")
+![SectorWatch preview](/docs/sectorwatch_readme.png?raw=true "SectorWatch on fenix 3")
 
 CalTrack
 --------
 [CalTrack on the Connect IQ App Store](https://apps.garmin.com/en-US/apps/5b0347f8-3032-4340-bb5e-a7bc2e27fb4a)
+
 [Overview Video](http://youtu.be/NlkRAYAFWOg)
 
 CalTrack is a simple calorie journal widget for the Garmin fenix 3. It's meant as a super lightweight alternative to other calorie trackers like MyFitnessPal.
