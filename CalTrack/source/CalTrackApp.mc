@@ -2,7 +2,7 @@ using Toybox.Application as App;
 using Toybox.Lang as Lang;
 
 //! Mmm global variables
-var gTodayDate, gTodayCal, gTodayGoal, gShowRemaining, gMode, gHundreds;
+var gTodayDate, gTodayCal, gTodayGoal, gShowRemaining, gMode, gHundreds, gMenuPressed, gStartPressed;
 hidden const MAX_DAYS_STORED = 7;
 
 enum {
@@ -15,6 +15,8 @@ class CalTrackApp extends App.AppBase {
 
     //! Constants
     hidden const FIRST_SETTING = 21; // MAX_DAYS_STORED * 3
+    hidden const MENU_PRESSED = 22;
+    hidden const START_PRESSED = 23;
 
     function onStart() {
         // Determine today's date
@@ -55,6 +57,16 @@ class CalTrackApp extends App.AppBase {
         if( null == gShowRemaining ) {
             gShowRemaining = true;
         }
+
+        // Pull the setting for START and MENU pressed
+        gMenuPressed = app.getProperty( MENU_PRESSED );
+        gStartPressed = app.getProperty( START_PRESSED );
+        if( null == gMenuPressed ) {
+            gMenuPressed = false;
+        }
+        if( null == gStartPressed ) {
+            gStartPressed = false;
+        }
     }
 
     //! onStop() is called when your application is exiting - Save everything
@@ -87,13 +99,17 @@ class CalTrackApp extends App.AppBase {
 
         if( !found ) {
             // Full up. Use oldest day.
-            app.setProperty( oldestDay, gTodayDate );
-            app.setProperty( oldestDay + 1, gTodayCal );
-            app.setProperty( oldestDay + 2, gTodayGoal );
+            app.setProperty( oldestIndex, gTodayDate );
+            app.setProperty( oldestIndex + 1, gTodayCal );
+            app.setProperty( oldestIndex + 2, gTodayGoal );
         }
 
         // Put the setting for remaining vs consumed
         app.setProperty( FIRST_SETTING, gShowRemaining );
+
+        // Put the settings for START and MENU pressed
+        app.setProperty( MENU_PRESSED, gMenuPressed );
+        app.setProperty( START_PRESSED, gStartPressed );
 
         app.saveProperties();
 

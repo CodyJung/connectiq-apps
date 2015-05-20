@@ -3,12 +3,15 @@
 		<string id="text_goal">GOAL</string>
 		<string id="text_remaining">REMAINING</string>
 		<string id="text_consumed">CONSUMED</string>
-		
+
 		<string id="text_menu">CalTrack</string>
 		<string id="text_settings">Settings</string>
 		<string id="text_history">History</string>
 		<string id="text_enter_hundreds">Enter Hundreds</string>
 		<string id="text_enter_tens">Enter Tens</string>
 		<string id="text_calorie_display">Calorie Display</string>
+
+		<string id="start_for_more">START to add calories</string>
+		<string id="menu_for_more">MENU to set goal</string>
 	</strings>
 </resources>

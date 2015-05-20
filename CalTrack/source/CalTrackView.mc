@@ -1,7 +1,6 @@
 using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
 using Toybox.Math as Math;
-using Toybox.Application as App;
 
 class CalTrackView extends Ui.View {
 
@@ -10,6 +9,9 @@ class CalTrackView extends Ui.View {
     hidden const ARC_MAX_ITERS = 300;
     hidden const CENTER_X = 109;
     hidden const CENTER_Y = 109;
+
+    var menu_pressed;
+    var start_pressed;
 
     //! Constructor
     function initialize() {
@@ -71,6 +73,21 @@ class CalTrackView extends Ui.View {
 
         View.findDrawableById( "current_label" ).draw( dc );
 
+        // On first run, show the help banner
+        if( !gMenuPressed ) {
+            dc.setColor( Gfx.COLOR_WHITE, Gfx.COLOR_WHITE );
+            dc.fillRectangle( 0, 0, 218, 72 );
+            dc.setColor( Gfx.COLOR_BLACK, Gfx.COLOR_TRANSPARENT );
+            View.findDrawableById( "one_time_tip" ).setText( Rez.Strings.menu_for_more );
+            View.findDrawableById( "one_time_tip" ).draw( dc );
+            }
+        else if( !gStartPressed ) {
+            dc.setColor( Gfx.COLOR_WHITE, Gfx.COLOR_WHITE );
+            dc.fillRectangle( 0, 0, 218, 72 );
+            dc.setColor( Gfx.COLOR_BLACK, Gfx.COLOR_TRANSPARENT );
+            View.findDrawableById( "one_time_tip" ).setText( Rez.Strings.start_for_more );
+            View.findDrawableById( "one_time_tip" ).draw( dc );
+            }
 
     }
 

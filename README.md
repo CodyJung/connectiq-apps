@@ -25,6 +25,21 @@ Supports gesture detection (fast updates) with a red sector representing the cur
 ![SectorWatch preview](/docs/sectorwatch_cover.png?raw=true "SectorWatch on fenix 3")
 ![SectorWatch 12hour preview](/docs/sectorwatch_12hour.png?raw=true "12-hour mode")
 
+CalTrack
+--------
+[CalTrack on the Connect IQ App Store](https://apps.garmin.com/en-US/apps/5b0347f8-3032-4340-bb5e-a7bc2e27fb4a)
+[Overview Video](http://youtu.be/NlkRAYAFWOg)
+
+CalTrack is a simple calorie journal widget for the Garmin fenix 3. It's meant as a super lightweight alternative to other calorie trackers like MyFitnessPal.
+
+Features:
+* Set a daily goal up to 4000 calories
+* 10-calorie resolution
+* 7 day history
+* Native Fenix 3 look and feel
+
+![CalTrack preview](/docs/caltrack_cover.png?raw=true "CalTrack on fenix 3")
+
 Pip-Boy 30
 ----------
 Not on the Connect IQ App Store because this is probably copyrighted, but you can get it here:

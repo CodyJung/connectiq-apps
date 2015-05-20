@@ -7,6 +7,7 @@ script:
 - ./scripts/build.sh PipBoy30 vivoactive fr920xt epix
 - ./scripts/build.sh ArcWatch fenix3
 - ./scripts/build.sh SectorWatch fenix3
+- ./scripts/build.sh CalTrack fenix3
 deploy:
   provider: s3
   access_key_id: AKIAJ7TL3Z6PASTLHQ5Q
