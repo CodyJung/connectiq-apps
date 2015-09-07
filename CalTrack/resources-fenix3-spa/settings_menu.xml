@@ -1,0 +1,7 @@
+<resources>
+	<menu id="SettingsMenu">
+		<menu-item id="settings_item_set_goal">Ajuste Meta</menu-item>
+		<menu-item id="settings_item_remaining">Visual. de Cal.</menu-item>
+		<menu-item id="settings_item_clear">Borrar Historial</menu-item>
+	</menu>
+</resources>

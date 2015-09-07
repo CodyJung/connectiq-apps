@@ -1,0 +1,6 @@
+<resources>
+	<menu id="CalorieDisplayMenu">
+		<menu-item id="cal_display_remaining">Restante</menu-item>
+		<menu-item id="cal_display_consumed">Consumidas</menu-item>
+	</menu>
+</resources>

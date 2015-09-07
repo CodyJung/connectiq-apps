@@ -1,0 +1,7 @@
+<resources>
+	<menu id="MainMenu">
+		<menu-item id="menu_item_settings">Config.</menu-item>
+		<menu-item id="menu_item_history">Historia</menu-item>
+		<menu-item id="menu_item_subtract">Reste Calorías</menu-item>
+	</menu>
+</resources>

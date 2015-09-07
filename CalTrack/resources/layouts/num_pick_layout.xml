@@ -1,0 +1,8 @@
+<layout id="NumberPickerLayout">
+    <label id="picker_title" font="Gfx.FONT_TINY" color="Gfx.COLOR_WHITE" x="center" y="20" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+    
+    <label id="hundreds_value" font="Gfx.FONT_NUMBER_HOT" color="Gfx.COLOR_WHITE" x="85" y="60" justification="Gfx.TEXT_JUSTIFY_CENTER" />   
+    <label id="tens_value" font="Gfx.FONT_NUMBER_HOT" color="Gfx.COLOR_WHITE" x="117" y="60" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+    <label id="ones_value" font="Gfx.FONT_NUMBER_HOT" color="Gfx.COLOR_WHITE" x="139" y="60" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+    
+</layout>

@@ -1,5 +1,7 @@
 <resources>
-    <string id="AppName">CalTrack</string>
+	<string id="AppName">CalTrack</string>
 
     <bitmap id="LauncherIcon" filename="images/launcher_icon.png" />
+    <bitmap id="UpArrow" filename="images/arrow_up.png" />
+    <bitmap id="DnArrow" filename="images/arrow_dn.png" />
 </resources>

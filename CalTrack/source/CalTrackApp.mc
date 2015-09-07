@@ -37,8 +37,6 @@ class CalTrackApp extends App.AppBase {
                 gTodayCal = app.getProperty( i + 1 );
                 gTodayGoal = app.getProperty( i + 2 );
                 found = true;
-                Toybox.System.println(gTodayCal.toString());
-                Toybox.System.println(gTodayGoal.toString());
                 break;
             } else if( null != day && day > latestDay ) {
                 latestDay = day;

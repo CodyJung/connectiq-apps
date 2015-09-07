@@ -1,0 +1,20 @@
+<resources>
+	<strings>
+		<string id="AppName">CalTrack</string>
+		
+		<string id="text_goal">META</string>
+		<string id="text_remaining">RESTANTE</string>
+		<string id="text_consumed">CONSUMIDAS</string>
+
+		<string id="text_menu">CalTrack</string>
+		<string id="text_settings">Config.</string>
+		<string id="text_history">Historia</string>
+		<string id="text_calorie_display">Visual. de Cal.</string>
+		<string id="text_add_calories">Añada Calorías</string>
+		<string id="text_subtract_calories">Reste Calorías</string>
+		<string id="text_set_goal">Ajuste Meta</string>
+
+		<string id="start_for_more">START para añadir calorías</string>
+		<string id="menu_for_more">MENU para ajustar meta</string>
+	</strings>
+</resources>

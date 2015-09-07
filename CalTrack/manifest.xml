@@ -3,13 +3,14 @@
 
         <iq:products>
             <iq:product id="fenix3"/>
+            <iq:product id="d2bravo"/>
         </iq:products>
 
-        <iq:permissions>
-        </iq:permissions>
+        <iq:permissions/>
 
         <iq:languages>
             <iq:language>eng</iq:language>
+            <iq:language>spa</iq:language>
         </iq:languages>
 
     </iq:application>
