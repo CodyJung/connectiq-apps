@@ -2,9 +2,9 @@
 	<strings>
 		<string id="AppName">CalTrack</string>
 		
-		<string id="text_goal">META</string>
-		<string id="text_remaining">RESTANTE</string>
-		<string id="text_consumed">CONSUMIDAS</string>
+		<string id="text_goal">Meta</string>
+		<string id="text_remaining">Restante</string>
+		<string id="text_consumed">Consumidas</string>
 
 		<!-- Dropdown banner hints -->
 		<string id="start_for_more">START para añadir calorías</string>

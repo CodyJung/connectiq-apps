@@ -37,27 +37,27 @@ class CalTrackView extends Ui.View {
         dc.setColor( Gfx.COLOR_BLACK, Gfx.COLOR_BLACK );
         dc.clear();
 
-        // Draw the calories arc
-        // 3.84 rad = 220 degrees
+        // Draw the arcs
+        dc.setPenWidth( 8 );
+
+        // Background arc
+        dc.setColor( Gfx.COLOR_DK_GRAY, Gfx.COLOR_BLACK );
+        dc.drawArc( CENTER_X, CENTER_Y, CENTER_X - 3, Gfx.ARC_CLOCKWISE, 240, 300 );
+
+        // Calories arc
+        gTodayCal = 100;
         var effectivePercentage = ( gTodayCal > gTodayGoal ) ? 1 : gTodayCal.toFloat() / gTodayGoal;
         effectivePercentage = ( gTodayCal < 0 ) ? 0 : effectivePercentage;
+
         if( effectivePercentage > 0.01 ) {
-            drawArc( dc, CENTER_X, CENTER_Y, CENTER_X - 5, effectivePercentage * 3.84, ( gTodayGoal > gTodayCal ) ? Gfx.COLOR_GREEN : Gfx.COLOR_RED );
+            var endAngle = ( 240 - ( effectivePercentage * 300 ) ).toLong() % 360;
+
+            dc.setColor( ( gTodayGoal > gTodayCal ) ? Gfx.COLOR_GREEN : Gfx.COLOR_RED, Gfx.COLOR_BLACK );
+            dc.drawArc( CENTER_X, CENTER_Y, CENTER_X - 3, Gfx.ARC_CLOCKWISE, 240, endAngle );
         }
 
-        // Draw the border for the arc
-        dc.setPenWidth( 2 );
-        dc.setColor( Gfx.COLOR_DK_GRAY, Gfx.COLOR_DK_GRAY );
-        dc.drawLine( CENTER_X, CENTER_Y, CENTER_X - 100, CENTER_Y + 45 );
-        dc.drawLine( CENTER_X, CENTER_Y, CENTER_X + 100, CENTER_Y + 45 );
-        dc.fillCircle( CENTER_X, CENTER_Y, 98 );
-
-        // Clear the inside of the arc
-        dc.setColor( Gfx.COLOR_BLACK, Gfx.COLOR_BLACK );
-        dc.fillPolygon( [ [CENTER_X, CENTER_Y], [CENTER_X + 101, CENTER_Y + 46], [CENTER_X + 101, 218], [CENTER_X - 101, 218], [CENTER_X - 101, CENTER_Y + 46] ] );
-        dc.fillCircle( CENTER_X, CENTER_Y, 96 );
-
         // Draw the various text
+        View.findDrawableById( "app_title"  ).draw( dc );
         View.findDrawableById( "goal_title" ).draw( dc );
 
         View.findDrawableById( "goal_value" ).setText( gTodayGoal.toString() );
@@ -89,28 +89,6 @@ class CalTrackView extends Ui.View {
             View.findDrawableById( "one_time_tip" ).draw( dc );
             }
 
-    }
-
-    //! Fast (but kind of bad-looking) arc drawing.
-    //! From http://stackoverflow.com/questions/8887686/arc-subdivision-algorithm/8889666#8889666
-    //! TODO: Once we have drawArc, use that instead.
-    function drawArc( dc, cent_x, cent_y, radius, theta, color ) {
-        dc.setColor( color, Gfx.COLOR_WHITE );
-
-        var iters = ARC_MAX_ITERS * ( theta / ( 2 * Math.PI ) );
-        var dx = -100;
-        var dy = 37;
-        var ctheta = Math.cos( theta / ( iters - 1 ) );
-        var stheta = Math.sin( theta / ( iters - 1 ) );
-
-        dc.fillCircle( cent_x + dx, cent_y + dy, BAR_THICKNESS );
-
-        for( var i=1; i < iters; ++i ) {
-            var dxtemp = ctheta * dx - stheta * dy;
-            dy = stheta * dx + ctheta * dy;
-            dx = dxtemp;
-            dc.fillCircle( cent_x + dx, cent_y + dy, BAR_THICKNESS );
-        }
     }
 
 }

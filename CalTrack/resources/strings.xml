@@ -1,8 +1,8 @@
 <resources>
 	<strings>
-		<string id="text_goal">GOAL</string>
-		<string id="text_remaining">REMAINING</string>
-		<string id="text_consumed">CONSUMED</string>
+		<string id="text_goal">Goal</string>
+		<string id="text_remaining">Remaining</string>
+		<string id="text_consumed">Consumed</string>
 
 		<!-- Dropdown banner hints -->
 		<string id="start_for_more">START to add calories</string>
