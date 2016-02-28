@@ -5,13 +5,8 @@ using Toybox.Math as Math;
 class CalTrackView extends Ui.View {
 
     //! Constants
-    hidden const BAR_THICKNESS = 10;
-    hidden const ARC_MAX_ITERS = 300;
     hidden const CENTER_X = 109;
     hidden const CENTER_Y = 109;
-
-    var menu_pressed;
-    var start_pressed;
 
     //! Constructor
     function initialize() {
@@ -45,7 +40,6 @@ class CalTrackView extends Ui.View {
         dc.drawArc( CENTER_X, CENTER_Y, CENTER_X - 3, Gfx.ARC_CLOCKWISE, 240, 300 );
 
         // Calories arc
-        gTodayCal = 100;
         var effectivePercentage = ( gTodayCal > gTodayGoal ) ? 1 : gTodayCal.toFloat() / gTodayGoal;
         effectivePercentage = ( gTodayCal < 0 ) ? 0 : effectivePercentage;
 
