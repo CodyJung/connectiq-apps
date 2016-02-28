@@ -18,7 +18,6 @@ class CalTrackBehaviorDelegate extends Ui.BehaviorDelegate {
         }
         else if( event.getKey() == WatchUi.KEY_MENU ) {
             var menu = new Rez.Menus.MainMenu();
-            menu.setTitle( Ui.loadResource( Rez.Strings.text_menu ) );
             Ui.pushView( menu, new MainMenuDelegate(), Ui.SLIDE_LEFT );
 
             // The user knows how to press the menu button

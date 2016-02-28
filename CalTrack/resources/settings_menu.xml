@@ -1,7 +1,7 @@
 <resources>
-	<menu id="SettingsMenu">
-		<menu-item id="settings_item_set_goal">Set Goal</menu-item>
-		<menu-item id="settings_item_remaining">Calorie Display</menu-item>
-		<menu-item id="settings_item_clear">Clear History</menu-item>
+	<menu id="SettingsMenu" title="@Rez.Strings.text_settings">
+		<menu-item id="settings_item_set_goal">@Rez.Strings.settings_menu_set_goal</menu-item>
+		<menu-item id="settings_item_remaining">@Rez.Strings.settings_menu_calorie_display</menu-item>
+		<menu-item id="settings_item_clear">@Rez.Strings.settings_menu_clear_history</menu-item>
 	</menu>
 </resources>

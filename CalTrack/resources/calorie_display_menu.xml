@@ -1,6 +1,6 @@
 <resources>
-	<menu id="CalorieDisplayMenu">
-		<menu-item id="cal_display_remaining">Remaining</menu-item>
-		<menu-item id="cal_display_consumed">Consumed</menu-item>
+	<menu id="CalorieDisplayMenu" title="@Rez.Strings.text_calorie_display">
+		<menu-item id="cal_display_remaining">@Rez.Strings.calorie_menu_remaining</menu-item>
+		<menu-item id="cal_display_consumed">@Rez.Strings.calorie_menu_consumed</menu-item>
 	</menu>
 </resources>

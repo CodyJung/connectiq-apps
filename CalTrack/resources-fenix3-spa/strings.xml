@@ -6,15 +6,34 @@
 		<string id="text_remaining">RESTANTE</string>
 		<string id="text_consumed">CONSUMIDAS</string>
 
+		<!-- Dropdown banner hints -->
+		<string id="start_for_more">START para añadir calorías</string>
+		<string id="menu_for_more">MENU para ajustar meta</string>
+
+		<!-- Main Menu -->
 		<string id="text_menu">CalTrack</string>
+		<string id="main_menu_settings">Config.</string>
+		<string id="main_menu_history">Historia</string>
+		<string id="main_menu_subtract">Reste Calorías</string>
+
+		<!-- Settings Menu -->
 		<string id="text_settings">Config.</string>
-		<string id="text_history">Historia</string>
+		<string id="settings_menu_set_goal">Ajuste Meta</string>
+		<string id="settings_menu_calorie_display">Visual. de Cal.</string>
+		<string id="settings_menu_clear_history">Borre Historia</string>
+
+		<!-- Calorie Display Menu -->
 		<string id="text_calorie_display">Visual. de Cal.</string>
+		<string id="calorie_menu_remaining">Restante</string>
+		<string id="calorie_menu_consumed">Consumidas</string>
+
+		<!-- History "Menu" -->
+		<string id="text_history">Historia</string>
+
+		<!-- Number picker titles -->
 		<string id="text_add_calories">Añada Calorías</string>
 		<string id="text_subtract_calories">Reste Calorías</string>
 		<string id="text_set_goal">Ajuste Meta</string>
 
-		<string id="start_for_more">START para añadir calorías</string>
-		<string id="menu_for_more">MENU para ajustar meta</string>
 	</strings>
 </resources>

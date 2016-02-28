@@ -4,15 +4,34 @@
 		<string id="text_remaining">REMAINING</string>
 		<string id="text_consumed">CONSUMED</string>
 
+		<!-- Dropdown banner hints -->
+		<string id="start_for_more">START to add calories</string>
+		<string id="menu_for_more">MENU to set goal</string>
+
+		<!-- Main Menu -->
 		<string id="text_menu">CalTrack</string>
+		<string id="main_menu_settings">Settings</string>
+		<string id="main_menu_history">History</string>
+		<string id="main_menu_subtract">Subtract Calories</string>
+
+		<!-- Settings Menu -->
 		<string id="text_settings">Settings</string>
-		<string id="text_history">History</string>
+		<string id="settings_menu_set_goal">Set Goal</string>
+		<string id="settings_menu_calorie_display">Calorie Display</string>
+		<string id="settings_menu_clear_history">Clear History</string>
+
+		<!-- Calorie Display Menu -->
 		<string id="text_calorie_display">Calorie Display</string>
+		<string id="calorie_menu_remaining">Remaining</string>
+		<string id="calorie_menu_consumed">Consumed</string>
+
+		<!-- History "Menu" -->
+		<string id="text_history">History</string>
+
+		<!-- Number picker titles -->
 		<string id="text_add_calories">Add Calories</string>
 		<string id="text_subtract_calories">Sub. Calories</string>
 		<string id="text_set_goal">Set Goal</string>
 
-		<string id="start_for_more">START to add calories</string>
-		<string id="menu_for_more">MENU to set goal</string>
 	</strings>
 </resources>

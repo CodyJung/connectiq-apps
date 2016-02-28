@@ -7,7 +7,6 @@ class MainMenuDelegate extends Ui.MenuInputDelegate {
     function onMenuItem(item) {
         if( item == :menu_item_settings ) {
             var menu = new Rez.Menus.SettingsMenu();
-            menu.setTitle( Ui.loadResource( Rez.Strings.text_settings ) );
             Ui.pushView( menu, new SettingsMenuDelegate(), Ui.SLIDE_LEFT );
         } else if( item == :menu_item_history ) {
             var historyMenu = new Ui.Menu();
@@ -53,7 +52,6 @@ class SettingsMenuDelegate extends Ui.MenuInputDelegate {
             Ui.pushView( new NumPick.NumberPickerView(), new NumPick.NumberPickerBehaviorDelegate(), Ui.SLIDE_LEFT );
         } else if( item == :settings_item_remaining ) {
             var menu = new Rez.Menus.CalorieDisplayMenu();
-            menu.setTitle( Ui.loadResource( Rez.Strings.text_calorie_display ) );
             Ui.pushView( menu, new CalorieDisplayMenuDelegate(), Ui.SLIDE_LEFT );
         } else if( item == :settings_item_clear ) {
             var app = App.getApp();
