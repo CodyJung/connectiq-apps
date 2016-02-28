@@ -3,6 +3,7 @@ using Toybox.Lang as Lang;
 
 //! Mmm global variables
 var gTodayDate, gTodayCal, gTodayGoal, gShowRemaining, gMode, gHundreds, gMenuPressed, gStartPressed;
+var gValuesChanged;
 hidden const MAX_DAYS_STORED = 7;
 
 enum {
@@ -65,52 +66,56 @@ class CalTrackApp extends App.AppBase {
         if( null == gStartPressed ) {
             gStartPressed = false;
         }
+
+        // We use this to determine if we have to save on exit or not
+        gValuesChanged = false;
     }
 
     //! onStop() is called when your application is exiting - Save everything
     function onStop() {
-        var oldestDay = 29991231;
-        var oldestIndex = 0;
-        var found = false;
+        if( gValuesChanged ) {
+            var oldestDay = 29991231;
+            var oldestIndex = 0;
+            var found = false;
 
-        var app = App.getApp();
-        for( var i=0; i < (MAX_DAYS_STORED * 3); i = i+3 ) {
-            var day = app.getProperty( i );
-            if( null != day && day == gTodayDate ) {
-                app.setProperty( i + 1, gTodayCal );
-                app.setProperty( i + 2, gTodayGoal );
-                found = true;
-                break;
-            } else if( null == day ) {
-                app.setProperty( i, gTodayDate );
-                app.setProperty( i + 1, gTodayCal );
-                app.setProperty( i + 2, gTodayGoal );
-                found = true;
-                break;
-            } else {
-                if( day < oldestDay ) {
-                    oldestDay = day;
-                    oldestIndex = i;
+            var app = App.getApp();
+            for( var i=0; i < (MAX_DAYS_STORED * 3); i = i+3 ) {
+                var day = app.getProperty( i );
+                if( null != day && day == gTodayDate ) {
+                    app.setProperty( i + 1, gTodayCal );
+                    app.setProperty( i + 2, gTodayGoal );
+                    found = true;
+                    break;
+                } else if( null == day ) {
+                    app.setProperty( i, gTodayDate );
+                    app.setProperty( i + 1, gTodayCal );
+                    app.setProperty( i + 2, gTodayGoal );
+                    found = true;
+                    break;
+                } else {
+                    if( day < oldestDay ) {
+                        oldestDay = day;
+                        oldestIndex = i;
+                    }
                 }
             }
+
+            if( !found ) {
+                // Full up. Use oldest day.
+                app.setProperty( oldestIndex, gTodayDate );
+                app.setProperty( oldestIndex + 1, gTodayCal );
+                app.setProperty( oldestIndex + 2, gTodayGoal );
+            }
+
+            // Put the setting for remaining vs consumed
+            app.setProperty( FIRST_SETTING, gShowRemaining );
+
+            // Put the settings for START and MENU pressed
+            app.setProperty( MENU_PRESSED, gMenuPressed );
+            app.setProperty( START_PRESSED, gStartPressed );
+
+            app.saveProperties();
         }
-
-        if( !found ) {
-            // Full up. Use oldest day.
-            app.setProperty( oldestIndex, gTodayDate );
-            app.setProperty( oldestIndex + 1, gTodayCal );
-            app.setProperty( oldestIndex + 2, gTodayGoal );
-        }
-
-        // Put the setting for remaining vs consumed
-        app.setProperty( FIRST_SETTING, gShowRemaining );
-
-        // Put the settings for START and MENU pressed
-        app.setProperty( MENU_PRESSED, gMenuPressed );
-        app.setProperty( START_PRESSED, gStartPressed );
-
-        app.saveProperties();
-
     }
 
     //! Return the initial view of your application here

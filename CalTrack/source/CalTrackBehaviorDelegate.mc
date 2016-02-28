@@ -14,6 +14,9 @@ class CalTrackBehaviorDelegate extends Ui.BehaviorDelegate {
                 gStartPressed = true;
             }
 
+            // The user may have changed some values, so we'll need to save on exit.
+            gValuesChanged = true;
+
             return true;
         }
         else if( event.getKey() == WatchUi.KEY_MENU ) {
@@ -24,6 +27,9 @@ class CalTrackBehaviorDelegate extends Ui.BehaviorDelegate {
             if( !gMenuPressed ) {
                 gMenuPressed = true;
             }
+
+            // The user may have changed some values, so we'll need to save on exit.
+            gValuesChanged = true;
 
             return true;
         }
