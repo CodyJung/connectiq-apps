@@ -4,7 +4,7 @@
     <label id="current_label" font="Gfx.FONT_TINY" color="Gfx.COLOR_WHITE" x="center" y="60" justification="Gfx.TEXT_JUSTIFY_CENTER" />
     <label id="current_value" font="Gfx.FONT_NUMBER_HOT" color="Gfx.COLOR_WHITE" x="center" y="70" justification="Gfx.TEXT_JUSTIFY_CENTER" />
 
-    <label id="goal_title" font="Gfx.FONT_XTINY" color="Gfx.COLOR_WHITE" x="center" y="170" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+    <label id="goal_title" font="Gfx.FONT_XTINY" color="Gfx.COLOR_WHITE" x="center" y="165" justification="Gfx.TEXT_JUSTIFY_CENTER" />
     <label id="goal_value" font="Gfx.FONT_NUMBER_MILD" color="Gfx.COLOR_WHITE" x="center" y="180" justification="Gfx.TEXT_JUSTIFY_CENTER" />
 
     <label id="one_time_tip" font="Gfx.FONT_TINY" color="Gfx.COLOR_BLACK" x="center" y="35" justification="Gfx.TEXT_JUSTIFY_CENTER" />
