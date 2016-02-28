@@ -3,6 +3,7 @@
 
         <iq:products>
             <iq:product id="fenix3"/>
+            <iq:product id="fenix3_hr"/>
             <iq:product id="d2bravo"/>
         </iq:products>
 
