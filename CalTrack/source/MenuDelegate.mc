@@ -4,6 +4,10 @@ using Toybox.Lang as Lang;
 using JungNumberPicker as NumPick;
 
 class MainMenuDelegate extends Ui.MenuInputDelegate {
+    function initialize() {
+        Ui.MenuInputDelegate.initialize();
+    }
+
     function onMenuItem(item) {
         if( item == :menu_item_settings ) {
             var menu = new Rez.Menus.SettingsMenu();
@@ -30,12 +34,10 @@ class MainMenuDelegate extends Ui.MenuInputDelegate {
 
                 if( latestIdx != -1 ) {
                     var dateString = latestDate.toString();
-                    historyMenu.addItem( Lang.format("$1$-$2$-$3$\n$4$/$5$", [ dateString.substring(0,4), dateString.substring(4,6), dateString.substring(6,8), app.getProperty(latestIdx + 1), app.getProperty(latestIdx + 2) ] ) );
+                    historyMenu.addItem( Lang.format("$1$-$2$-$3$\n$4$/$5$", [ dateString.substring(0,4), dateString.substring(4,6), dateString.substring(6,8), app.getProperty(latestIdx + 1), app.getProperty(latestIdx + 2) ] ), i );
                     mruDate = latestDate;
                 }
-
             }
-
 
             Ui.pushView( historyMenu, new SettingsMenuDelegate(), Ui.SLIDE_LEFT );
         } else if( item == :menu_item_subtract ) {
@@ -46,6 +48,10 @@ class MainMenuDelegate extends Ui.MenuInputDelegate {
 }
 
 class SettingsMenuDelegate extends Ui.MenuInputDelegate {
+    function initialize() {
+        Ui.MenuInputDelegate.initialize();
+    }
+
     function onMenuItem(item) {
         if( item == :settings_item_set_goal ) {
             gMode = MODE_GOAL;
@@ -63,6 +69,10 @@ class SettingsMenuDelegate extends Ui.MenuInputDelegate {
 }
 
 class CalorieDisplayMenuDelegate extends Ui.MenuInputDelegate {
+    function initialize() {
+        Ui.MenuInputDelegate.initialize();
+    }
+
     function onMenuItem(item) {
         if( item == :cal_display_remaining ) {
             gShowRemaining = true;

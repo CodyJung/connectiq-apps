@@ -14,12 +14,16 @@ enum {
 
 class CalTrackApp extends App.AppBase {
 
+    function initialize() {
+        App.AppBase.initialize();
+    }
+
     //! Constants
     hidden const FIRST_SETTING = 21; // MAX_DAYS_STORED * 3
     hidden const MENU_PRESSED = 22;
     hidden const START_PRESSED = 23;
 
-    function onStart() {
+    function onStart( state ) {
         // Determine today's date
         var dateInfo = Time.Gregorian.info( Time.now(), Time.FORMAT_SHORT );
         var dateString = Lang.format("$1$$2$$3$", [dateInfo.year, dateInfo.month.format("%02d"), dateInfo.day.format("%02d")] );
@@ -72,7 +76,7 @@ class CalTrackApp extends App.AppBase {
     }
 
     //! onStop() is called when your application is exiting - Save everything
-    function onStop() {
+    function onStop( state ) {
         if( gValuesChanged ) {
             var oldestDay = 29991231;
             var oldestIndex = 0;

@@ -4,6 +4,10 @@ using Toybox.Math as Math;
 using JungNumberPicker as NumPick;
 
 class CalTrackBehaviorDelegate extends Ui.BehaviorDelegate {
+    function initialize() {
+        Ui.BehaviorDelegate.initialize();
+    }
+
     function onKey( event ) {
         if( event.getKey() == WatchUi.KEY_ENTER ) {
             gMode = MODE_ADDING;

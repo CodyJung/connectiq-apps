@@ -10,6 +10,7 @@ class CalTrackView extends Ui.View {
 
     //! Constructor
     function initialize() {
+        Ui.View.initialize();
     }
 
     //! Load your resources here

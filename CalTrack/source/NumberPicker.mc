@@ -24,6 +24,8 @@ module JungNumberPicker {
 
         //! Constructor
         function initialize() {
+            Ui.View.initialize();
+
             page_mode = PG_MODE_HUNDREDS;
             value = 1234;
 
@@ -88,6 +90,10 @@ module JungNumberPicker {
     }
 
     class NumberPickerBehaviorDelegate extends Ui.BehaviorDelegate {
+        function initialize() {
+            Ui.BehaviorDelegate.initialize();
+        }
+
         function onKey( event ) {
             if( event.getKey() == WatchUi.KEY_ENTER ) {
                 //! Go to the next page mode, or finish
