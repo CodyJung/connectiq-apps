@@ -39,6 +39,10 @@ class MainMenuDelegate extends Ui.MenuInputDelegate {
                 }
             }
 
+            if( mruDate == 29991231 ) {
+                historyMenu.addItem( Rez.Strings.text_no_history, 0 );
+            }
+
             Ui.pushView( historyMenu, new SettingsMenuDelegate(), Ui.SLIDE_LEFT );
         } else if( item == :menu_item_subtract ) {
             gMode = MODE_SUBTRACTING;

@@ -29,6 +29,7 @@
 
 		<!-- History "Menu" -->
 		<string id="text_history">Historia</string>
+		<string id="text_no_history">Ningúna historia</string>
 
 		<!-- Number picker titles -->
 		<string id="text_add_calories">Añada Calorías</string>
